@@ -29,3 +29,19 @@ CREATE TABLE CARGOS
 	NOME TEXT,
 	SALARIO NUMERIC(7,2) -- aceita 7 digitos e 2 depois da casa decimal 
 );
+
+--Seleção de dados: 
+
+SELECT * FROM EMPREGADOS;
+SELECT * FROM DEPTOS;
+SELECT * FROM CARGOS;
+
+
+--Inserir dados:
+
+INSERT INTO EMPREGADOS VALUES (01, 'Daniel Robson', 'daniel456@gmail.com');
+INSERT INTO DEPTOS VALUES (01, 'TI');
+INSERT INTO CARGOS VALUES (01, 'Desenvolvedor', 10000.00);
+
+
+	
