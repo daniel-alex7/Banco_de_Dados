@@ -64,6 +64,21 @@ references paciente (id_pac);
 --renomear nome da tabela paciente para pacientes
 
 Alter table paciente rename to pacientes;
+select * from pacientes;
+
+--Devemos evitar a exclusão, a de tabela é a pior 
 
 
+--exclusão de coluna:
+Alter table pacientes drop column  tel_pac;
+select * from pacientes;
 
+--exclusão de restrição: 
+Alter Table consulta drop constraint fk_id_med;
+select * from consulta;
+
+/*
+--exclusão de tabela:
+Drop table pacientes cascade;
+Drop table medico,consulta cascade;
+*/
