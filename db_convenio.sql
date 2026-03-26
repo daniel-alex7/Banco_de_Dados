@@ -66,17 +66,18 @@ SELECT * FROM pessoas;
 DELETE FROM pessoas;
 
 --DELETAR DADOS UTILIZANDO CLAUSULA WHERE
-
 DELETE FROM pessoas WHERE nome_pes = 'Davi'
 
+--MODIFICAR DADOS, ATUALIZAR
+UPDATE dependentes SET nome_dep = 'Ana Clara' WHERE nome_dep = 'Maria';
+
+SELECT * FROM dependentes;
+
+-----------
+
+UPDATE pessoas SET nome_pes = 'Rodrigo' WHERE nome_pes = 'Daiana' 
+
 SELECT * FROM pessoas;
-
-
-
-
-
-
-
 
 
 
