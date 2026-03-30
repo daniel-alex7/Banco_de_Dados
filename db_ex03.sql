@@ -1,5 +1,5 @@
 
-CREATE DATABASE aula_aula03b;
+CREATE DATABASE aula_ex03b;
 
 
 CREATE TABLE aluno (

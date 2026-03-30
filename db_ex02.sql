@@ -1,5 +1,5 @@
 -- 1) Criar banco
-CREATE DATABASE db_aula02;
+CREATE DATABASE db_ex02;
 
 CREATE TABLE teste (
     codigo NUMERIC(5) NOT NULL,
