@@ -77,3 +77,6 @@ where nome_alu ilike '%Daniel%'
 
 --SELECIONE O NOME DOS ALUNOS QUE POSSUI A LETRA 'A' NO FINAL DO NOME
 select nome_alu from alunos where nome_alu ilike '%a';
+
+--SELECIONE O NOME DO CURSO QUE POSSUI O ALUNO CHAMADO DANIEL
+select nome_cur from  cursos, alunos where nome_alu = 'Daniel'  and  cursos.id_cur = alunos.id_cur;
