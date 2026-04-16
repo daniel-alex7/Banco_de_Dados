@@ -57,7 +57,23 @@ select * from cursos where duracao_cur between 2 and 4;
 
 
 --SELECIONE O NOME DOS ALUNOS QUE CURSAM TADS EM ORDEM CRESCENTE
-select nome_alu from alunos  order by nome_alu asc;
+select nome_alu from alunos where id_cur = 1  order by nome_alu asc; 
+
+--integridade referencial, quando verificamos se a pk = fk
+select nome_alu from alunos, cursos where cursos.id_cur = alunos.id_cur and nome_cur = 'TADS' 
+order by nome_alu asc; 
+
+
+
+
 --SELECIONE O NOME DO ALUNO QUE TEM A LETRA 'E' NO FINAL DO NOME
+select nome_alu from alunos where nome_alu ilike '%e';
+
 --SELECIONE O NOME DO ALUNO QUE TEM DANIEL OU JULIANA
+select nome_alu 
+from alunos 
+where nome_alu ilike '%Daniel%' 
+   or nome_alu ilike '%Juliana%';
+
 --SELECIONE O NOME DOS ALUNOS QUE POSSUI A LETRA 'A' NO FINAL DO NOME
+select nome_alu from alunos where nome_alu ilike '%a';
