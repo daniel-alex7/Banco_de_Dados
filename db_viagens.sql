@@ -1,5 +1,5 @@
 CREATE TABLE cliente (
-        cod cli INTEGER,
+        cod_cli INTEGER,
         nome VARCHAR(40),
         cpf VARCHAR(11) unique,
         rua VARCHAR(30),
@@ -25,7 +25,7 @@ CREATE TABLE passagem (
     );
 
 CREATE TABLE rota (
-        num voo VARCHAR(30),
+        num_voo VARCHAR(30),
         rota VARCHAR(30) NOT NULL,
         num_passagem INTEGER,
         Constraint pk_rota primary key (num_voo),
