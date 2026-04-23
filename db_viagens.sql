@@ -1,5 +1,9 @@
 CREATE TABLE cliente (
+<<<<<<< HEAD
         cod_cli INT,
+=======
+        cod_cli INTEGER,
+>>>>>>> dee6465f0aa2a419724a427fc0d5a1454721086a
         nome VARCHAR(40),
         cpf VARCHAR(11) unique,
         rua VARCHAR(30),
@@ -18,19 +22,33 @@ CREATE TABLE passagem (
         data_compra DATE,
         tipo_cartao INTEGER,
         num_cartao VARCHAR(30) NOT NULL,
+<<<<<<< HEAD
         cod_cli INTEGER,
         Constraint pk_passagem primary key (num),
+=======
+        cod cli INTEGER,
+        Constraint pk passagem primary key (num),
+>>>>>>> dee6465f0aa2a419724a427fc0d5a1454721086a
         Constraint fk_passagem_cli foreign key (cod_cli) 
         references cliente (cod_cli)
     );
 
 CREATE TABLE rota (
+<<<<<<< HEAD
     num_voo VARCHAR(30),
     rota VARCHAR(30) NOT NULL,
     num_passagem INTEGER,
     CONSTRAINT pk_rota PRIMARY KEY (num_voo),
     CONSTRAINT fk_rota_pass FOREIGN KEY (num_passagem) REFERENCES passagem (num)
 );
+=======
+        num_voo VARCHAR(30),
+        rota VARCHAR(30) NOT NULL,
+        num_passagem INTEGER,
+        Constraint pk_rota primary key (num_voo),
+        Constraint fk_rota_pass foreign key (num_passagem) references passagem (num)
+    );
+>>>>>>> dee6465f0aa2a419724a427fc0d5a1454721086a
 
 -- Povoando Clientes
 INSERT INTO cliente VALUES (1, 'EDUARDO SILVA', '11122233344', 'Rua Cecilia', '10', 'Centro', 'São Paulo', 'SP', '01010000');
@@ -69,10 +87,17 @@ SELECT * FROM cliente WHERE uf = 'SP' OR rua = 'Rua Cecilia';
 SELECT cod_cli, nome FROM cliente ORDER BY nome ASC;
 
 --6
+<<<<<<< HEAD
 SELECT cod_cli, nome FROM cliente ORDER BY cod_cli DESC;
 
 --7
 SELECT * FROM cliente WHERE uf = 'SP' ORDER BY uf ASC, nome DESC;
+=======
+SELECT cod_cli, nome FROM cliente ORDER BY cod_cli DESC
+
+--7
+SELECT * FROM cliente WHERE uf <> 'SP' ORDER BY uf ASC, nome DESC;
+>>>>>>> dee6465f0aa2a419724a427fc0d5a1454721086a
 
 --8
 SELECT nome FROM cliente WHERE cod_cli BETWEEN 2 AND 5;
@@ -84,6 +109,7 @@ SELECT nome FROM cliente WHERE nome LIKE '%E%';
 SELECT nome FROM cliente WHERE nome NOT LIKE 'G%';
 
 --11
+<<<<<<< HEAD
 SELECT uf FROM cliente WHERE uf LIKE 'M%';
 
 
@@ -121,3 +147,6 @@ and p.valor > 150 ;
 
 
 
+=======
+SELECT uf FROM cliente WHERE uf LIKE 'M%';
+>>>>>>> dee6465f0aa2a419724a427fc0d5a1454721086a
